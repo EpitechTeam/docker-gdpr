@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+    jenkins:
+        image: jenkins/jenkins:lts
+        ports:
+          - 8080:8080
+        volumes:
+          - .docker/jenkins_data:/var/jenkins_home
+          - ${PROJECT_VOLUME:-.}:/home/project
+    nodeserver:
+        build : ./gdpr-checker-back
+        ports:
+            - "9090:9090"
+        volumes:
+            - static-content:/home/data/
+volumes:
+    static-content:
