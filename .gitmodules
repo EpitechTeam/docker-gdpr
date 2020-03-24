@@ -1,3 +1,6 @@
 [submodule "gdpr-checker-back"]
 	path = gdpr-checker-back
 	url = https://github.com/EpitechTeam/gdpr-checker-back.git
+[submodule "gdpr-checker-front"]
+	path = gdpr-checker-front
+	url = https://github.com/EpitechTeam/gdpr-checker-front.git
