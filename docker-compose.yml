@@ -14,5 +14,10 @@ services:
             - "9090:9090"
         volumes:
             - static-content:/home/data/
+    frontend:
+        build: ./gdpr-checker-front
+        ports:
+            - "80:80"
+
 volumes:
     static-content:
